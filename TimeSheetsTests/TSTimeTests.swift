@@ -35,4 +35,10 @@ class TSTimeTests: XCTestCase {
         let time2 = TSTime(hour: 2, minute: 0)
         XCTAssertEqual(time1 + time2, TSTime(hour: 3, minute: 0), "Two TSTime objects shall be able to be added - hours only.")
     }
+
+    func test_time_canBeAdded_hoursAndMinuts_withMinuteRollOver() {
+        let time1 = TSTime(hour: 1, minute: 45)
+        let time2 = TSTime(hour: 2, minute: 30)
+        XCTAssertEqual(time1 + time2, TSTime(hour: 4, minute: 15), "Two TSTime objects shall be able to be added - minutes sum greater than 60.")
+    }
 }

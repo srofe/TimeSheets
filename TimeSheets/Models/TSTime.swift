@@ -24,6 +24,6 @@ extension TSTime: Equatable {
 
 extension TSTime {
     static func+(lhs: TSTime, rhs: TSTime) -> TSTime {
-        TSTime(hour: lhs.hour + rhs.hour, minute: lhs.minute + rhs.minute)
+        TSTime(hour: (lhs.hour + rhs.hour) + (lhs.minute + rhs.minute) / 60, minute: (lhs.minute + rhs.minute) % 60)
     }
 }
