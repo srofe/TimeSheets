@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct TSTime {
+struct TSTime: CustomStringConvertible {
     let hour: Int
     let minute: Int
+
+    var description: String {
+        "\(hour):\(minute)"
+    }
 }

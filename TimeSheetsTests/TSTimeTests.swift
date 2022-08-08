@@ -18,4 +18,9 @@ class TSTimeTests: XCTestCase {
         let time = TSTime(hour: 12, minute: 34)
         XCTAssertEqual(time.minute, 34, "A TSTime shall have a minute property")
     }
+
+    func test_time_isCustomStringConvertible() {
+        let time = TSTime(hour: 6, minute: 45)
+        XCTAssertEqual(time.description, "6:45", "TSTime shall conform to CustomStringConvertible protocol.")
+    }
 }
