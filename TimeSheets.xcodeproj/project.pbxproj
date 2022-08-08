@@ -11,9 +11,10 @@
 		F4AEC66E28A0EDA100FC1DF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEC66D28A0EDA100FC1DF1 /* ContentView.swift */; };
 		F4AEC67028A0EDA300FC1DF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4AEC66F28A0EDA300FC1DF1 /* Assets.xcassets */; };
 		F4AEC67328A0EDA300FC1DF1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4AEC67228A0EDA300FC1DF1 /* Preview Assets.xcassets */; };
-		F4AEC67E28A0EDA300FC1DF1 /* TimeSheetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEC67D28A0EDA300FC1DF1 /* TimeSheetsTests.swift */; };
+		F4AEC67E28A0EDA300FC1DF1 /* TSTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEC67D28A0EDA300FC1DF1 /* TSTimeTests.swift */; };
 		F4AEC68828A0EDA300FC1DF1 /* TimeSheetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEC68728A0EDA300FC1DF1 /* TimeSheetsUITests.swift */; };
 		F4AEC68A28A0EDA300FC1DF1 /* TimeSheetsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEC68928A0EDA300FC1DF1 /* TimeSheetsUITestsLaunchTests.swift */; };
+		F4AEC69828A0EE5D00FC1DF1 /* TSTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEC69728A0EE5D00FC1DF1 /* TSTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +42,11 @@
 		F4AEC67228A0EDA300FC1DF1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4AEC67428A0EDA300FC1DF1 /* TimeSheets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeSheets.entitlements; sourceTree = "<group>"; };
 		F4AEC67928A0EDA300FC1DF1 /* TimeSheetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeSheetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4AEC67D28A0EDA300FC1DF1 /* TimeSheetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheetsTests.swift; sourceTree = "<group>"; };
+		F4AEC67D28A0EDA300FC1DF1 /* TSTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTimeTests.swift; sourceTree = "<group>"; };
 		F4AEC68328A0EDA300FC1DF1 /* TimeSheetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeSheetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AEC68728A0EDA300FC1DF1 /* TimeSheetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheetsUITests.swift; sourceTree = "<group>"; };
 		F4AEC68928A0EDA300FC1DF1 /* TimeSheetsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheetsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F4AEC69728A0EE5D00FC1DF1 /* TSTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		F4AEC66A28A0EDA100FC1DF1 /* TimeSheets */ = {
 			isa = PBXGroup;
 			children = (
+				F4AEC69628A0EE4F00FC1DF1 /* Models */,
 				F4AEC66B28A0EDA100FC1DF1 /* TimeSheetsApp.swift */,
 				F4AEC66D28A0EDA100FC1DF1 /* ContentView.swift */,
 				F4AEC66F28A0EDA300FC1DF1 /* Assets.xcassets */,
@@ -115,7 +118,7 @@
 		F4AEC67C28A0EDA300FC1DF1 /* TimeSheetsTests */ = {
 			isa = PBXGroup;
 			children = (
-				F4AEC67D28A0EDA300FC1DF1 /* TimeSheetsTests.swift */,
+				F4AEC67D28A0EDA300FC1DF1 /* TSTimeTests.swift */,
 			);
 			path = TimeSheetsTests;
 			sourceTree = "<group>";
@@ -127,6 +130,14 @@
 				F4AEC68928A0EDA300FC1DF1 /* TimeSheetsUITestsLaunchTests.swift */,
 			);
 			path = TimeSheetsUITests;
+			sourceTree = "<group>";
+		};
+		F4AEC69628A0EE4F00FC1DF1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEC69728A0EE5D00FC1DF1 /* TSTime.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4AEC66E28A0EDA100FC1DF1 /* ContentView.swift in Sources */,
+				F4AEC69828A0EE5D00FC1DF1 /* TSTime.swift in Sources */,
 				F4AEC66C28A0EDA100FC1DF1 /* TimeSheetsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4AEC67E28A0EDA300FC1DF1 /* TimeSheetsTests.swift in Sources */,
+				F4AEC67E28A0EDA300FC1DF1 /* TSTimeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
