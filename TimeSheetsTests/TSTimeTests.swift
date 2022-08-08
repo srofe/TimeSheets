@@ -41,4 +41,10 @@ class TSTimeTests: XCTestCase {
         let time2 = TSTime(hour: 2, minute: 30)
         XCTAssertEqual(time1 + time2, TSTime(hour: 4, minute: 15), "Two TSTime objects shall be able to be added - minutes sum greater than 60.")
     }
+
+    func test_time_canBeSubtracted_minutesOnly() {
+        let time1 = TSTime(hour: 0, minute: 30)
+        let time2 = TSTime(hour: 0, minute: 15)
+        XCTAssertEqual(time1 - time2, TSTime(hour: 0, minute: 15), "Two TSTime objects shall be able to be subtracted - minutes only.")
+    }
 }

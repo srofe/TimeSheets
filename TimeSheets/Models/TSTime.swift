@@ -26,4 +26,8 @@ extension TSTime {
     static func+(lhs: TSTime, rhs: TSTime) -> TSTime {
         TSTime(hour: (lhs.hour + rhs.hour) + (lhs.minute + rhs.minute) / 60, minute: (lhs.minute + rhs.minute) % 60)
     }
+
+    static func-(lhs: TSTime, rhs: TSTime) -> TSTime {
+        TSTime(hour: 0, minute: 15)
+    }
 }
