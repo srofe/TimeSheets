@@ -9,4 +9,5 @@ import Foundation
 
 struct TSTime {
     let hour: Int
+    let minute: Int
 }
