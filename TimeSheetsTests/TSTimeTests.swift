@@ -53,4 +53,10 @@ class TSTimeTests: XCTestCase {
         let time2 = TSTime(hour: 1, minute: 0)
         XCTAssertEqual(time1 - time2, TSTime(hour: 2, minute: 0), "Two TSTime objects shall be able to be subtracted - hours only.")
     }
+
+    func test_time_canBeSubtracted_withMinutesRollOver() {
+        let time1 = TSTime(hour: 3, minute: 15)
+        let time2 = TSTime(hour: 1, minute: 45)
+        XCTAssertEqual(time1 - time2, TSTime(hour: 1, minute: 30), "Two TSTime objects shall be able to be subtracted - hours only.")
+    }
 }

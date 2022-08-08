@@ -28,6 +28,12 @@ extension TSTime {
     }
 
     static func-(lhs: TSTime, rhs: TSTime) -> TSTime {
-        TSTime(hour: lhs.hour - rhs.hour, minute: lhs.minute - rhs.minute)
+        if rhs.minute > lhs.minute {
+            let lhsHour = lhs.hour - 1
+            let lhsMinute = lhs.minute + 60
+            return TSTime(hour: (lhsHour - rhs.hour), minute: lhsMinute - rhs.minute)
+        } else {
+            return TSTime(hour: (lhs.hour - rhs.hour), minute: lhs.minute - rhs.minute)
+        }
     }
 }
