@@ -15,3 +15,15 @@ struct TSTime: CustomStringConvertible {
         "\(hour):\(minute)"
     }
 }
+
+extension TSTime: Equatable {
+    static func==(lhs: TSTime, rhs: TSTime) -> Bool {
+        lhs.hour == rhs.hour && lhs.minute == rhs.minute
+    }
+}
+
+extension TSTime {
+    static func+(lhs: TSTime, rhs: TSTime) -> TSTime {
+        TSTime(hour: 2, minute: 0)
+    }
+}
