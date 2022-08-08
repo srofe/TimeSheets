@@ -24,9 +24,15 @@ class TSTimeTests: XCTestCase {
         XCTAssertEqual(time.description, "6:45", "TSTime shall conform to CustomStringConvertible protocol.")
     }
 
-    func test_time_canBeAdded() {
-        let time1 = TSTime(hour: 1, minute: 15)
-        let time2 = TSTime(hour: 0, minute: 45)
-        XCTAssertEqual(time1 + time2, TSTime(hour: 2, minute: 0), "Two TSTime objects shall be able to be added.")
+    func test_time_canBeAdded_minutesOnly() {
+        let time1 = TSTime(hour: 0, minute: 15)
+        let time2 = TSTime(hour: 0, minute: 15)
+        XCTAssertEqual(time1 + time2, TSTime(hour: 0, minute: 30), "Two TSTime objects shall be able to be added - minutes only.")
+    }
+
+    func test_time_canBeAdded_hoursOnly() {
+        let time1 = TSTime(hour: 1, minute: 0)
+        let time2 = TSTime(hour: 2, minute: 0)
+        XCTAssertEqual(time1 + time2, TSTime(hour: 3, minute: 0), "Two TSTime objects shall be able to be added - hours only.")
     }
 }
