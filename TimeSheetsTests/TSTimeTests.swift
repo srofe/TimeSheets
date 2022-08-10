@@ -72,11 +72,11 @@ class TSTimeTests: XCTestCase {
 
     func test_time_hasDecimalDescription() {
         let time = TSTime(hour: 6, minute: 15)
-        XCTAssertEqual(time.decimalDescription, "6.25", "TSTime shall provide a decimal description as a string.")
+        XCTAssertEqual(time.decimalHours, "6.25", "TSTime shall provide a decimal description as a string.")
     }
 
     func test_time_hasDecimalDescriptionWithPadding() {
         let time = TSTime(hour: 10, minute: 30)
-        XCTAssertEqual(time.decimalDescription, "10.50", "TSTime shall provide a decimal description as a string with zero padding at end.")
+        XCTAssertEqual(time.decimalHours, "10.50", "TSTime shall provide a decimal description as a string with zero padding at end.")
     }
 }

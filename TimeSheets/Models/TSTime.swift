@@ -13,7 +13,7 @@ struct TSTime {
 }
 
 extension TSTime {
-    var decimalDescription: String {
+    var decimalHours: String {
         String(format: "%.2f", arguments: [Double(hour) + Double(minute) / 60.0])
     }
 }
