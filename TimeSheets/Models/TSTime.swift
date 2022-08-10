@@ -14,7 +14,7 @@ struct TSTime {
 
 extension TSTime: CustomStringConvertible {
     var description: String {
-        "\(hour):\(minute)"
+        String(format: "%d:%02d", arguments: [hour, minute])
     }
 }
 

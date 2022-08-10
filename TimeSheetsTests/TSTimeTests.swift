@@ -24,6 +24,16 @@ class TSTimeTests: XCTestCase {
         XCTAssertEqual(time.description, "6:45", "TSTime shall conform to CustomStringConvertible protocol.")
     }
 
+    func test_time_customStringConvertiblePadsWithZero() {
+        let time = TSTime(hour: 2, minute: 30)
+        XCTAssertEqual(time.description, "2:30", "TSTime description shall show trailing zero for thirty minutes.")
+    }
+
+    func test_time_customStringConvertiblePadsWithTwoZeros() {
+        let time = TSTime(hour: 2, minute: 0)
+        XCTAssertEqual(time.description, "2:00", "TSTime description shall show two zeros when there are zero minutes.")
+    }
+
     func test_time_canBeAdded_minutesOnly() {
         let time1 = TSTime(hour: 0, minute: 15)
         let time2 = TSTime(hour: 0, minute: 15)
