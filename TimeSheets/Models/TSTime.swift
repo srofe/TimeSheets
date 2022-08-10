@@ -12,6 +12,12 @@ struct TSTime {
     let minute: Int
 }
 
+extension TSTime {
+    var decimalDescription: String {
+        String(format: "%.2f", arguments: [Double(hour) + Double(minute) / 60.0])
+    }
+}
+
 extension TSTime: CustomStringConvertible {
     var description: String {
         String(format: "%d:%02d", arguments: [hour, minute])
